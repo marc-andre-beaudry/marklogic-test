@@ -1,0 +1,20 @@
+## sparql query
+
+SELECT ?rel ?Rack ?CommRoom ?Floor ?Building ?City ?Country ?Region
+WHERE
+{
+    ?Rack a <Class#Rack>.
+    ?Rack ?rel ?CommRoom.
+    ?CommRoom a <Class#CommRoom>.
+    ?CommRoom ?rel ?Floor.
+    ?Floor a <Class#Floor>.
+    ?Floor ?rel ?Building.
+    ?Building a <Class#Building>.
+    ?Building ?rel ?City.
+    ?City a <Class#City>.
+    ?City ?rel ?Country.
+    ?Country a <Class#Country>.
+    ?Country ?rel ?Region.
+    ?Region a <Class#Region>.
+}
+limit 1000

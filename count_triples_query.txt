@@ -1,0 +1,3 @@
+## sparql query - Count triples in repository
+
+SELECT (COUNT(*) AS ?no) { ?s ?p ?o  }
